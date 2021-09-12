@@ -526,6 +526,9 @@ public class CoreWorkload extends Workload {
           Double.parseDouble(p.getProperty(HOTSPOT_OPN_FRACTION, HOTSPOT_OPN_FRACTION_DEFAULT));
       keychooser = new HotspotIntegerGenerator(insertstart, insertstart + insertcount - 1,
           hotsetfraction, hotopnfraction);
+    } 
+    else if (requestdistrib.equals("disadvantage")){
+      keychooser = new DisadvantageGenerator();
     } else {
       throw new WorkloadException("Unknown request distribution \"" + requestdistrib + "\"");
     }
