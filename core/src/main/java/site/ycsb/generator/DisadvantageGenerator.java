@@ -29,5 +29,10 @@ public class DisadvantageGenerator extends NumberGenerator {
   private static long min(long a, long b, long c, long d, long e) {
     return Math.min(a, Math.min(b, Math.min(c, Math.min(d, e))));
   }
+
+  @Override
+  public double mean() {
+    throw new UnsupportedOperationException("Can't compute mean of non-stationary distribution!");
+  }
 }
   
