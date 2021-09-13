@@ -17,11 +17,11 @@ public class DisadvantageGenerator extends NumberGenerator {
   public Long nextValue() {
     Random rand = new Random();
 
-    long rand1 = rand.nextLong();
-    long rand2 = rand.nextLong();
-    long rand3 = rand.nextLong();
-    long rand4 = rand.nextLong();
-    long rand5 = rand.nextLong();
+    long rand1 = (long) rand.nextInt(1000);
+    long rand2 = (long) rand.nextInt(1000);
+    long rand3 = (long) rand.nextInt(1000);
+    long rand5 = (long) rand.nextInt(1000);
+    long rand4 = (long) rand.nextInt(1000);
 
     return min(rand1, rand2, rand3, rand4, rand5);
   }
